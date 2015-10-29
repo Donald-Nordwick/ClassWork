@@ -14,9 +14,10 @@ public class LabTwo {
 		int dieRoll=0;
 		int gameNum = 0;
 		String response=null;
+		int high = 0;
 		while (i < 10) {
 			RandomNumber ranNum = new RandomNumber();
-			dieRoll= ranNum.GetANumber_Between_1_and_10();
+			dieRoll= ranNum.RandomNumber(high);
 			compNum[i] = dieRoll;
 			gameNum = dieRoll%2;
 			
