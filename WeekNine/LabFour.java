@@ -20,7 +20,7 @@ public class LabFour {
 		while (i < 10) {
 
 			
-			GetANumber ranNum = new GetANumber();
+			Get_A_Number ranNum = new Get_A_Number();
 			dieRoll= ranNum.GetANumber_Between_1_and_10(high);
 			compNum[i] = dieRoll;
 			gameNum = dieRoll%2;
