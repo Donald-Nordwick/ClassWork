@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lab4 {
+public class LabFive {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int i = 0;
@@ -16,14 +16,12 @@ public class Lab4 {
 		int high = 0;
 		int low = 0;
 		String response=null;
-		RandomNumber ranNum = new RandomNumber();
 		
-		System.out.println("Please choose the lowest number the dice can roll:");
-		low=input.nextInt();
+		
+		
 		System.out.println("Please choose the highest number the dice can roll:");
 		high=input.nextInt();
-		ranNum.setLowNumber(low);
-		ranNum.setHighNumber(high);
+		RandomNumber ranNum = new RandomNumber(high);
 		
 		while (i < 10) {
 

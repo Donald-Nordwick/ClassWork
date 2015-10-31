@@ -1,8 +1,18 @@
 
 public class RandomNumber 
 {
+	/*In order to make the previous labs that don't rely on constructors 
+	 * work, comment out the constructor on lines 9-12*/
+	/*In order to make Lab 6 work comment out  the constructor on lines 9-12*/
 	private int LowNumber;
 	private int HighNumber;
+	/*public RandomNumber(int High){
+		LowNumber = High;
+	}*/
+	public RandomNumber(int High, int Low){
+		LowNumber = Low;
+		HighNumber = High;
+	}
 	public void setLowNumber(int num){
 		LowNumber = num;
 	}
@@ -37,7 +47,11 @@ public class RandomNumber
 	}
 	public int Random_Number()
 	{
-		int RandomNumber= getLowNumber() + (int) (Math.random()*(getHighNumber() - getLowNumber()));
+		int RandomNumber= getLowNumber() + (int) (Math.random()*(getHighNumber() - getLowNumber()+1));
+		return RandomNumber;
+	}
+	public int RandomNum(){
+		int RandomNumber= 1 + (int) (Math.random()*getHighNumber());
 		return RandomNumber;
 	}
 }
