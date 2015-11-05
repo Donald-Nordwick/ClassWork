@@ -3,33 +3,44 @@ public class Dice {
 	public Dice(){
 		
 	}
-	private int RollNum,Value;
 	
+	private int RollNum,Value,Test;
+	public Dice(int bounces){
+		int track,sum = 0;
+		Dice roll = new Dice();
+		
+		for (int i = 0; i<bounces; i++){
+			roll.Throw();
+			track = roll.Value();
+			sum = sum+track;
+		}
+		RollNum = sum/bounces;
+		Test = sum;
+	}
 	public void Throw(){
 		RollNum = 1 + (int)(Math.random()*6);
 	}
 	public void Throw(int bounces){
-		int i =0;
+		
 		int Roll = 0;
 		int Total = 0;
-		while(i<bounces){
+		for (int i=0;i< bounces;i++){
 		Roll= 1 + (int)(Math.random()*6);
 		Total = Total + Roll;
-		i++;
+		
 		}
 		Value = Total;
+		Test = Total;
 		RollNum = Total/bounces;
 		
 	}
 	public int Test2(){
-		return Value;
+		return Test;
 	}
 	public int Value(){
 		return RollNum;
 	}
-	public Dice(int roll){
-		RollNum=roll;
-	}
+	
 	public int roll(){
 		int total = RollNum*6;
 		int randomRoll = 1+ (int)(Math.random()*total);
