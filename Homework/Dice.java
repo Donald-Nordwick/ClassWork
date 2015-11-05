@@ -4,7 +4,8 @@ public class Dice {
 		
 	}
 	
-	private int RollNum,Value,Test;
+	private int Value,Test; //RollNum(keeps track of number dice rolled), Value(Keeps track of average Rolled)
+	private static int RollNum;
 	public Dice(int bounces){
 		int track,sum = 0;
 		Dice roll = new Dice();
@@ -46,4 +47,9 @@ public class Dice {
 		int randomRoll = 1+ (int)(Math.random()*total);
 		return randomRoll;
 	}
+	public static int OneThrow(){
+		RollNum = 1+ (int)(Math.random()*6);
+		return RollNum;
+	}
+	
 }
