@@ -41,7 +41,15 @@ public class Dice {
 	public int Value(){
 		return RollNum;
 	}
-	
+	public int roll(int dieAmt){
+		int tot = 0;
+		int roll;
+		for (int i = 0; i<dieAmt; i++){
+			roll = 1 + (int)(Math.random()*6);
+			tot = tot +roll;
+		}
+		return tot;
+	}
 	public int roll(){
 		int total = RollNum*6;
 		int randomRoll = 1+ (int)(Math.random()*total);
